@@ -18,7 +18,7 @@ def category(score):
     else:
         return "Fail"
     
-for x in unique_score:
+for x in score:
     result = category(x)
     if result == "Distinction":
         d += 1
