@@ -1,0 +1,9 @@
+Valid Users:
+amit - Basic User
+rohit - Basic User
+saksham - Basic User
+rohit123 - Advanced User
+admin - Basic User
+
+Invalid Users:
+test@

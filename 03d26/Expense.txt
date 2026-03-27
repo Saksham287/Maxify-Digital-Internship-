@@ -1,0 +1,3 @@
+Total Income: $1800
+Total Expense: -$400
+Net Balance: $1400
