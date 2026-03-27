@@ -1,4 +1,4 @@
 Students Results
-Distinction: 2 
+Distinction: 3 
 Pass: 1 
-Fail: 3
+Fail: 4
