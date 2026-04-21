@@ -1,0 +1,18 @@
+$kind: http-request
+name: add_user
+url: http://127.0.0.1:5000/users
+method: POST
+headers:
+  Proxy-Authorization: bearer
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzc2Nzc0MzMxfQ.aFz_m8ESK1PM-eqb4wzvF3Aap0Y_9Jhakq3GtK4qcGw
+body:
+  type: json
+  content: |-
+    {
+        "name": "Ron"
+    }
+auth:
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzc2Nzc0NTc5fQ.XFdv5_r_SIBPNVua3zHl9xC20uIhFQze_d7ey6p3qFM
+  type: bearer
+order: 2039537235118730

@@ -1,0 +1,12 @@
+$kind: http-request
+name: Genrate_token
+url: http://127.0.0.1:5000/login
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "username": "admin",
+      "password": "admin123"
+    } 
+order: 1776773982375

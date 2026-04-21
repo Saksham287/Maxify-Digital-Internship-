@@ -1,0 +1,14 @@
+$kind: http-request
+name: users_info
+url: http://127.0.0.1:5000/users
+method: GET
+headers:
+  - key: Proxy-Authorization
+    value: bearer
+      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzc2Nzc0MzMxfQ.aFz_m8ESK1PM-eqb4wzvF3Aap0Y_9Jhakq3GtK4qcGw
+auth:
+  credentials:
+    - key: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzc2Nzc0MzMxfQ.aFz_m8ESK1PM-eqb4wzvF3Aap0Y_9Jhakq3GtK4qcGw
+  type: bearer
+order: 500533534288677
