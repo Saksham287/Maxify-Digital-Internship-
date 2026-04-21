@@ -1,6 +1,6 @@
 import sqlite3
 
-def init_db():
+def init_db():  # sourcery skip: swap-if-else-branches, use-named-expression
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
 
@@ -37,7 +37,7 @@ def init_db():
     count = cursor.fetchone()[0]
 
     if count == 0:
-        cursor.execute("INSERT INTO users (name) VALUES (?)", ("Saksham",))
+        cursor.execute("INSERT INTO users (name) VALUES (?)", ("Dan",))
         cursor.execute("INSERT INTO users (name) VALUES (?)", ("John",))
         print("Sample users inserted")
     else:

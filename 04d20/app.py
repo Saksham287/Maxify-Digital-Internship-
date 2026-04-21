@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 import sqlite3
 import jwt
-import datetime
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from functools import wraps
 
 app = Flask(__name__)
@@ -70,7 +71,7 @@ def init_db():
     user_count = cursor.fetchone()[0]
 
     if user_count == 0:
-        cursor.execute("INSERT INTO users (name) VALUES (?)", ("Saksham",))
+        cursor.execute("INSERT INTO users (name) VALUES (?)", ("Dan",))
         cursor.execute("INSERT INTO users (name) VALUES (?)", ("John",))
 
     conn.commit()
@@ -100,10 +101,12 @@ def login():
         return jsonify({"error": "Invalid username or password"}), 401
 
     # Token valid for 2 minutes
+    expiry = datetime.utcnow() + timedelta(minutes=2)
+    
     token = jwt.encode(
         {
             "username": username,
-            "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=2)
+            "exp": expiry
         },
         app.config["SECRET_KEY"],
         algorithm="HS256"
@@ -111,7 +114,8 @@ def login():
 
     return jsonify({
         "message": "Login successful",
-        "token": token
+        "token": token,
+        "expires_at" : expiry.strftime("%Y-%m-%d %H:%M:%S %Z")
     })
 
 
@@ -174,3 +178,15 @@ def home():
 if __name__ == "__main__":
     init_db()
     app.run(debug=True)
+    
+    
+    
+    
+
+"""
+{
+  "username": "admin",
+  "password": "admin123"
+} 
+"""
+
