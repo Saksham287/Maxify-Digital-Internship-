@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:5000/users
+  method: GET
+  headers:
+    - key: Proxy-Authorization
+      value: "bearer "
+response:
+  statusCode: 401
+  statusText: UNAUTHORIZED
+  headers:
+    - key: server
+      value: Werkzeug/3.1.8 Python/3.12.5
+    - key: date
+      value: Tue, 28 Apr 2026 05:30:43 GMT
+    - key: content-type
+      value: application/json
+    - key: content-length
+      value: "35"
+    - key: connection
+      value: close
+  body:
+    type: json
+    content: |-
+      {
+        "error": "Token has expired"
+      }
+order: 1777354255141
+name: Token Expired

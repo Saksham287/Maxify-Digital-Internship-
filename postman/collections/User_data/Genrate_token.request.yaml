@@ -1,5 +1,4 @@
 $kind: http-request
-name: Genrate_token
 url: http://127.0.0.1:5000/login
 method: POST
 body:
@@ -9,4 +8,5 @@ body:
       "username": "admin",
       "password": "admin123"
     } 
+examples: .resources/Genrate_token.resources/examples
 order: 1776773982375

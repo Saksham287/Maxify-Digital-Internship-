@@ -1,0 +1,35 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:5000/users
+  method: POST
+  headers:
+    - key: Proxy-Authorization
+      value: "bearer "
+  body:
+    type: json
+    content: |-
+      {
+          "name": "Rat2"
+      }
+response:
+  statusCode: 400
+  statusText: BAD REQUEST
+  headers:
+    - key: server
+      value: Werkzeug/3.1.8 Python/3.12.5
+    - key: date
+      value: Tue, 28 Apr 2026 05:59:00 GMT
+    - key: content-type
+      value: application/json
+    - key: content-length
+      value: "48"
+    - key: connection
+      value: close
+  body:
+    type: json
+    content: |-
+      {
+        "error": "Name must contain only letters"
+      }
+order: 249554883467406
+name: Error

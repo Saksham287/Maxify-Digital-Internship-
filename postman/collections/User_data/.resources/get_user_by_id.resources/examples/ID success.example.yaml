@@ -1,0 +1,39 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:5000/users/4
+  method: GET
+  headers:
+    - key: Proxy-Authorization
+      value: "bearer "
+  body:
+    type: json
+    content: |-
+      {
+          "name": "Ben"
+      }
+      {
+          "name": "Ron"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: server
+      value: Werkzeug/3.1.8 Python/3.12.5
+    - key: date
+      value: Tue, 28 Apr 2026 06:00:41 GMT
+    - key: content-type
+      value: application/json
+    - key: content-length
+      value: "31"
+    - key: connection
+      value: close
+  body:
+    type: json
+    content: |-
+      {
+        "id": 4,
+        "name": "Ben"
+      }
+order: 1425981147323715
+name: ID success

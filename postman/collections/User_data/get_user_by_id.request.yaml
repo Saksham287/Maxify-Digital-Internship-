@@ -1,10 +1,8 @@
 $kind: http-request
-name: get_user_by_id
 url: http://127.0.0.1:5000/users/3
 method: GET
 headers:
-  Proxy-Authorization: bearer
-    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzc2Nzc0MzMxfQ.aFz_m8ESK1PM-eqb4wzvF3Aap0Y_9Jhakq3GtK4qcGw
+  Proxy-Authorization: "bearer "
 body:
   type: json
   content: |-
@@ -16,6 +14,7 @@ body:
     }
 auth:
   credentials:
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzc2Nzc0NzQ1fQ.ZHc8h5S0qkCrKliry77IpvltpMwRFhnQxiO9g2zRPzU
+    token: ""
   type: bearer
+examples: .resources/get_user_by_id.resources/examples
 order: 3675216667247890

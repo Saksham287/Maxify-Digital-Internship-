@@ -18,7 +18,7 @@ cipher = Fernet(SECRET_ENC_KEY)
 db_config = {
     "host": "localhost",
     "user": "root",
-    "password": "My_pswrd",
+    "password": "S@ksham287",
     "database": "auth_app"
 }
 

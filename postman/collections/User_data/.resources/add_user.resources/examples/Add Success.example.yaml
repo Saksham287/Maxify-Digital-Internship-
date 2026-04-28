@@ -1,0 +1,39 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:5000/users
+  method: POST
+  headers:
+    - key: Proxy-Authorization
+      value: "bearer "
+  body:
+    type: json
+    content: |-
+      {
+          "name": "Gem"
+      }
+response:
+  statusCode: 201
+  statusText: CREATED
+  headers:
+    - key: server
+      value: Werkzeug/3.1.8 Python/3.12.5
+    - key: date
+      value: Tue, 28 Apr 2026 05:58:24 GMT
+    - key: content-type
+      value: application/json
+    - key: content-length
+      value: "93"
+    - key: connection
+      value: close
+  body:
+    type: json
+    content: |-
+      {
+        "message": "User created successfully",
+        "user": {
+          "id": 7,
+          "name": "Gem"
+        }
+      }
+order: 1777355909300
+name: Add Success
